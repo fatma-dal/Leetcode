@@ -1,50 +1,41 @@
-/*Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-
-You can return the answer in any order.
-
- 
-
-Example 1:
-
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-Example 2:
-
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
-Example 3:
-
-Input: nums = [3,3], target = 6
-Output: [0,1]
+/*
  */
 
+// using for loop
 
-
-
-
-
-var twoSum = function(nums, target) {
-    // Loop through the array
-    for (var i = 0; i < nums.length; i++) {
-        // For each number, loop through the remaining numbers
-        for (var j = i + 1; j < nums.length; j++) {
+// var twoSum = function(nums, target) {
+//     for (var i = 0; i < nums.length; i++) {
+//         for (var j = i + 1; j < nums.length; j++) {
             
-            if (nums[i] + nums[j] === target) {
-                // Return the indices
-                return [i, j];
-            }
-        }
+//             if (nums[i] + nums[j] === target) {
+//                 return [i, j]
+//             }
+//         }
+//     }
+//     return []
+// }
+
+// using while 
+var twoSum = function(nums, target) {
+    let i=0
+    let  j=i+1
+    while (i<arr.length-1){
+        target=arr[i]+arr[j]
+        i++
+        j++
+        return [i,j]
     }
     
-    return [];
-};
+    return []
+}
 
-var arr = [3, 2, 4];
-var y = 6;
-console.log(twoSum(arr, y)); 
+
+
+
+var arr = [0, 2, 6,1,7]
+var y = 6
+console.log(twoSum(arr, y))
+// whik
 
 
 
